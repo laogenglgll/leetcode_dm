@@ -14,5 +14,5 @@ int main()
 }
 
 int strStr(char * haystack, char * needle){
-    
+   1 
 }
