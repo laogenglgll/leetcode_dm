@@ -1,5 +1,5 @@
 /*
-将有序数组转换为二叉搜索树
+有序链表转换二叉搜索树
 O()
 O()
 */
@@ -12,28 +12,22 @@ int main()
     return 0;
 }
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
-/**
- * Definition for a binary tree node.
+
+    * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
  *     struct TreeNode *left;
  *     struct TreeNode *right;
  * };
  */
- 
-int nums[2000] = {};
+
+
+int nums[100000] = {};
 
 struct TreeNode* sortedListToBST(struct ListNode* head) {
     struct TreeNode* arrayToBST(int* nums,int head,int last);
     int  arrayTOBst(int* nums,struct ListNode* head);
-    int len = arrayToBst(nums,head);
+    int len = arrayTOBst(nums,head);
     return arrayToBST(nums,0,len - 1);
 }
 
@@ -43,6 +37,7 @@ int arrayTOBst(int* nums,struct ListNode* head) {
         nums[len++] = head->val;
         head = head->next;
     }
+    return len;
 }
 struct TreeNode* arrayToBST(int* nums,int head,int last) {
     if(head > last) {
