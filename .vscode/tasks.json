@@ -1,6 +1,7 @@
 {
 	"version": "2.0.0",
 	"tasks": [
+		/*
 		{
 			"type": "cppbuild",
 			"label": "C/C++: gcc.exe 生成活动文件",
@@ -21,25 +22,57 @@
 			"group": "build",
 			"detail": "编译器: C:\\cc\\mingw64\\bin\\gcc.exe"
 		},
+		*/
 		{
 			"type": "cppbuild",
-			"label": "C/C++: gcc.exe 生成活动文件",
-			"command": "C:\\cc\\mingw64\\bin\\gcc.exe",
+			"label": "C/C++: cl.exe 生成活动文件",
+			"command": "cl.exe",
 			"args": [
-				"-fdiagnostics-color=always",
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"/Zi",
+				"/EHsc",
+				"/nologo",
+				"/Fe:",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
-				"$gcc"
+				"$msCompile"
 			],
 			"group": "build",
-			"detail": "编译器: C:\\cc\\mingw64\\bin\\gcc.exe"
+			"detail": "编译器: cl.exe"
 		}
 	]
 }
+
+//msvc 
+/*
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cl.exe 生成活动文件",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/nologo",
+				"/Fe:",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "编译器: cl.exe"
+		}
+	]
+}
+*/
